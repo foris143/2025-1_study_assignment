@@ -11,13 +11,13 @@ namespace star
             int size = 2 * (radius + 1);
 
             // ---------- TODO ----------
-            void typeC(int row)
+            for(int i=1; i <= size; i++)
             {
-                if( row == 1)
+                if( i == 1)
                 {
                     Console.Write(new string(' ',size));
                 }
-                else if( row == 2 || row == size)
+                else if( i == 2 || i == size)
                 {
                     Console.Write("  "+new string('*',size-3)+" ");
                 }
@@ -25,10 +25,8 @@ namespace star
                 {
                     Console.Write(" *"+ new string(' ', size-2));
                 }
-            }
-            void typeSharp(int row)
-            {
-                if( row == (int)(size/3) || row == (int)(size*2/3))
+                
+                if( i == (int)(size/3) || i == (int)(size*2/3))
                 {
                     Console.WriteLine(new string('*', size));
                 }
@@ -37,13 +35,6 @@ namespace star
                     Console.WriteLine(new string(' ', (int)(size/3)-1)+'*'+new string(' ', (int)(size/3)-1)+'*');
                 }
             }
-
-            for(int i=1; i <= size; i++)
-            {
-                typeC(i);
-                typeSharp(i);
-            }
-
             
             // --------------------
         }
