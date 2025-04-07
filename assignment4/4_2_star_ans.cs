@@ -11,7 +11,40 @@ namespace star
             int size = 2 * (radius + 1);
 
             // ---------- TODO ----------
+            void typeC(int row)
+            {
+                if( row == 1)
+                {
+                    Console.Write(new string(' ',size));
+                }
+                else if( row == 2 || row == size)
+                {
+                    Console.Write("  "+new string('*',size-3)+" ");
+                }
+                else
+                {
+                    Console.Write(" *"+ new string(' ', size-2));
+                }
+            }
+            void typeSharp(int row)
+            {
+                if( row == (int)(size/3) || row == (int)(size*2/3))
+                {
+                    Console.WriteLine(new string('*', size));
+                }
+                else
+                {
+                    Console.WriteLine(new string(' ', (int)(size/3)-1)+'*'+new string(' ', (int)(size/3)-1)+'*');
+                }
+            }
 
+            for(int i=1; i <= size; i++)
+            {
+                typeC(i);
+                typeSharp(i);
+            }
+
+            
             // --------------------
         }
 
