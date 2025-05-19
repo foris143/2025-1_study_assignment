@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         // ---------- TODO ---------- 
         if (Character && CamObj)
         {
-            CamObj.transform.position = new Vector3(Character.transform.position.x, Character.transform.position.y, Character.transform.position.z);
+            CamObj.transform.position = new Vector3(Character.transform.position.x, Character.transform.position.y, CamObj.transform.position.z);
         }
             // -------------------- 
         }
@@ -47,9 +47,12 @@ public class GameManager : MonoBehaviour
     {
         // Character는 초당 CharacterSpeed의 속도로 우측으로 움직인다.
         // ---------- TODO ---------- 
-        Character.transform.position += new Vector3(CharacterSpeed, 0, 0) * Time.deltaTime;
+        if (Character)
+        {
+            Character.transform.position += new Vector3(CharacterSpeed, 0, 0) * Time.deltaTime;
+        }
         // -------------------- 
-    }
+        }
 
     public void GameOver()
     {

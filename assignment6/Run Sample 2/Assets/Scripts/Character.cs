@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    const float CharacterJumpPower = 7f;
-    const int MaxJump = 2;
+    const float CharacterJumpPower = 6f;
+    const int MaxJump = 3;
     int RemainJump = 0;
     GameManager GM;
 
